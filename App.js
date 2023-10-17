@@ -1,11 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import Position from './components/Position';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.heading}>Current weather</Text>
+      <Position />
     </View>
   );
 }
@@ -13,8 +14,25 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: Constants.statusBarHeight,
+    backgroundColor: '#fff'
   },
+  heading: {
+    fontSize: 24,
+    textAlign: 'center',
+    marginTop: 8,
+    marginBottom: 8
+  },
+  input: {
+    backgroundColor: '#F0F0F0',
+    borderColor: '#FAFAFA',
+    height: 40,
+    margin: 8
+  },
+  list: {
+    margin: 8
+  },
+  row: {
+    height: 30
+  }
 });
